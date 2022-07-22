@@ -75,6 +75,7 @@ $url = ruta::ctrRuta();
 		else if ($ruta == "conoce-mas") {
 			
 		}
+<<<<<<< HEAD
 		else if ($ruta == "causas") {
 			include 'modulos/causas.php';
 			$inicio=false;
@@ -87,6 +88,8 @@ $url = ruta::ctrRuta();
 			include 'modulos/soluciones.php';
 			$inicio=false;
 		}
+=======
+>>>>>>> 76374835fa1c11b0875b1529038933986598bcae
 		else{
 			include "modulos/error404.php";
 			$inicio = false; 

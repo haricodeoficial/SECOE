@@ -47,27 +47,43 @@
 
     </div>
     <section id="secciones">
+<<<<<<< HEAD
       <a href="causas">
       <div class="section-banner-1">
          <div class="container-fluid">
            <div class="row">
               <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 data-aos="zoom-in" data-aos-duration="700" class="text-center link-land">Causas</h1>
+=======
+       <div class="section-banner-1">
+         <div class="container-fluid">
+           <div class="row">
+              <div class="col-sm-12 d-flex justify-content-center titulo-margen">
+                    <h1 data-aos="zoom-in" data-aos-duration="700" class="text-center ">Causas</h1>
+>>>>>>> 76374835fa1c11b0875b1529038933986598bcae
             </div>
            </div>
            </div>
         </div>
+<<<<<<< HEAD
       </a>
         <a href="efectos" class="link-land-a">
+=======
+>>>>>>> 76374835fa1c11b0875b1529038933986598bcae
         <div class="section-banner-2">
             <div class="container-fluid">
            <div class="row">
               <div class="col-sm-12 d-flex justify-content-center titulo-margen">
+<<<<<<< HEAD
                     <h1 data-aos="zoom-in" data-aos-duration="8000" class="text-center link-land">Efectos</h1>
+=======
+                    <h1 data-aos="zoom-in" data-aos-duration="8000" class="text-center ">Efectos</h1>
+>>>>>>> 76374835fa1c11b0875b1529038933986598bcae
             </div>
            </div>
            </div>
         </div>
+<<<<<<< HEAD
         </a>
       <a href="soluciones">
          <div class="section-banner-3">
@@ -75,12 +91,22 @@
            <div class="row">
               <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 data-aos="zoom-in" data-aos-duration="900" class="text-center link-land">Soluciones</h1>
+=======
+             <div class="section-banner-3">
+            <div class="container-fluid">
+           <div class="row">
+              <div class="col-sm-12 d-flex justify-content-center titulo-margen">
+                    <h1 data-aos="zoom-in" data-aos-duration="900" class="text-center ">Soluciones</h1>
+>>>>>>> 76374835fa1c11b0875b1529038933986598bcae
             </div>
            </div>
            </div>
         </div>
+<<<<<<< HEAD
          </a>
 
+=======
+>>>>>>> 76374835fa1c11b0875b1529038933986598bcae
         </section>
         <section id="boletin">
          <div class="container-fluid">
