@@ -51,7 +51,7 @@ $url = ruta::ctrRuta();
 <!--FIN - ETIQUETAS CSS-->
 </head>
 
-<body>
+<body onload="GetMap()">
 	<?php
 	include "modulos/header.php";
 
@@ -100,24 +100,56 @@ $url = ruta::ctrRuta();
 <!--Azure Maps -->
 <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.js"></script>
 <script>
-	var map;
+	var map, map2;
+
+	var weatherTileUrl = 'https://atlas.microsoft.com/map/tile?api-version=2.1&tilesetId=microsoft.weather.infrared.main&zoom=7&x=-103.5&y=20.5';
 	
 	function GetMap() {
-		map = new atlas.Map('mapa-clima',{
-			center: [-99.47, 40.75],
-        	zoom: 3,
+		map = new atlas.Map("mapa-clima",{
+			center: [-103.5, 20.5],
+        	zoom: 7,
+			style: 'grayscale_dark',
 			view: 'Auto',
 			authOptions: {
-				authType: 'anonymous',
-				clientId: '889bd91a-12b6-4f2d-a4e3-3ec9ec9818fd',
-				getToken: function (resolve, reject, map){
-					var tokenServiceUrl = 'https://samples.azuremaps.com/api/GetAzureMapsToken'
+				authType: 'subscriptionKey',
+				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A'
+			}
+		})
 
-					fetch(tokenServiceUrl).then(r => r.text().then(token => resolve(token)));
-				}
+		map.events.add('ready', function (){
+			var layerName = document.getElementById("layerSelector").value;
+
+            var tileUrl = weatherTileUrl.replace('{layerName}', layerName);
+
+            if (!tileLayer) {
+                //Create a tile layer and add it to the map below the label layer.
+                tileLayer = new atlas.layer.TileLayer({
+                    tileUrl: tileUrl,
+                    opacity: 0.9,
+                    tileSize: 256
+                });
+
+                map.layers.add(tileLayer, 'labels');
+            } else {
+                tileLayer.setOptions({
+                    tileUrl: tileUrl
+                });
+            }
+		})
+
+
+		map2 = new atlas.Map("mapa-relieve",{
+			center: [-103.5, 20.5],
+        	zoom: 7,
+			style: 'grayscale_light',
+			view: 'Auto',
+			authOptions: {
+				authType: 'subscriptionKey',
+				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A'
 			}
 		})
 	}
+
 </script>
 
 <!--ETIQUETAS JS-->

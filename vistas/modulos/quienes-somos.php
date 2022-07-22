@@ -14,7 +14,7 @@
                 </p>
             </div>
         </div>
-        <div class="card row">
+        <div class="card row" style="background-color: #A4BF75;">
             <div style="height:400px;" class="col-sm-6 d-flex align-items-center">
                 <h1 class="card-title d-flex">Creatividad e Innovación</h1>
                 <p class="card-text d-flex">
@@ -28,7 +28,7 @@
                 <img src="<?php echo $url;?>vistas/img/creatividad.png" class="center">
             </div>
         </div>
-        <div class="card row">
+        <div class="card row" style="background-color: #548294;">
             <div class="col-sm-6 d-flex">
                 <img src="<?php echo $url;?>vistas/img/escalabilidad.png" class="center">
             </div>
@@ -53,7 +53,7 @@
                 <img src="<?php echo $url;?>vistas/img/viabilidad.png" class="center">
             </div>
         </div>
-        <div class="card row">
+        <div class="card row" style="background-color: #A4BF75;">
             <div class="col-sm-6 d-flex">
                 <img src="<?php echo $url;?>vistas/img/tecnico.png" class="center">
             </div>

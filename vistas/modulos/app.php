@@ -21,24 +21,29 @@
  <section id="mapa-jalisco">
    <div class="container-fluid"> 
 
-        <div class="row">
+        <div class="row" style="background-color: #548294; padding-bottom: 50px;">
             <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 class="text-center ">Mapa de Clima en Jalisco</h1>
             </div>
-            <div class="col-sm-12 d-flex" onload="GetMap()">
-              <div id="mapa-clima"></div>
+            <div class="center col-sm-8 d-flex">
+              <div id="mapa-clima" class="mapa"></div>
             </div>
+        </div>
+        <div class="row" style="background-color: #A4BF75; padding-bottom: 50px;">
             <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 class="text-center ">Mapa de Relieve de Jalisco</h1>
             </div>
-            <div class="col-sm-12 container">
-              
+            <div class="center col-sm-8 d-flex">
+              <div id="mapa-relieve" class="mapa"></div>
             </div>
+        </div>
+        <div class="row">
            <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 class="text-center ">Mapa de Especies de Árboles en Jalisco</h1>
             </div>
-            <div class="col-sm-12 container">
+            <div class="center col-sm-8 d-flex">
             </div>
+        </div>
            <div class="col-sm-4 d-flex">
 
               <img class="img-full box-shadow" src="<?php echo $url;?>vistas/img/section-1.webp">
