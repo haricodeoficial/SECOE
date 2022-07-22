@@ -47,33 +47,40 @@
 
     </div>
     <section id="secciones">
-       <div class="section-banner-1">
+    <a href="causas">
+    <div class="section-banner-1">
          <div class="container-fluid">
            <div class="row">
               <div class="col-sm-12 d-flex justify-content-center titulo-margen">
-                    <h1 data-aos="zoom-in" data-aos-duration="700" class="text-center ">Causas</h1>
+                    <h1 data-aos="zoom-in" data-aos-duration="700" class="text-center link-land">Causas</h1>
             </div>
            </div>
            </div>
         </div>
-        <div class="section-banner-2">
+    </a>
+   <a href="efectos">
+   <div class="section-banner-2">
             <div class="container-fluid">
            <div class="row">
               <div class="col-sm-12 d-flex justify-content-center titulo-margen">
-                    <h1 data-aos="zoom-in" data-aos-duration="8000" class="text-center ">Efectos</h1>
+                    <h1 data-aos="zoom-in" data-aos-duration="8000" class="text-center link-land">Efectos</h1>
             </div>
            </div>
            </div>
         </div>
-             <div class="section-banner-3">
+      </a>
+        <a href="soluciones">
+        <div class="section-banner-3">
             <div class="container-fluid">
-           <div class="row">
-              <div class="col-sm-12 d-flex justify-content-center titulo-margen">
-                    <h1 data-aos="zoom-in" data-aos-duration="900" class="text-center ">Soluciones</h1>
-            </div>
-           </div>
+               <div class="row">
+                  <div class="col-sm-12 d-flex justify-content-center titulo-margen">
+                    <h1 data-aos="zoom-in" data-aos-duration="900" class="text-center link-land">Soluciones</h1>
+                  </div>
+               </div>
            </div>
         </div>
+        </a>
+
         </section>
         <section id="boletin">
          <div class="container-fluid">
