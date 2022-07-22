@@ -39,6 +39,7 @@ $url = ruta::ctrRuta();
 <!--FIN - ETIQUETAS META-->
 
 <!--ETIQUETAS CSS-->
+<link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" rel="stylesheet" />
 <link rel="icon" href="<?php echo $url;?>vistas/img/icono.png">
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -96,6 +97,28 @@ $url = ruta::ctrRuta();
 
 <script src="<?php echo $url;?>vistas/js/menu.js"></script>
 
+<!--Azure Maps -->
+<script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.js"></script>
+<script>
+	var map;
+	
+	function GetMap() {
+		map = new atlas.Map('mapa-clima',{
+			center: [-99.47, 40.75],
+        	zoom: 3,
+			view: 'Auto',
+			authOptions: {
+				authType: 'anonymous',
+				clientId: '889bd91a-12b6-4f2d-a4e3-3ec9ec9818fd',
+				getToken: function (resolve, reject, map){
+					var tokenServiceUrl = 'https://samples.azuremaps.com/api/GetAzureMapsToken'
+
+					fetch(tokenServiceUrl).then(r => r.text().then(token => resolve(token)));
+				}
+			}
+		})
+	}
+</script>
 
 <!--ETIQUETAS JS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
