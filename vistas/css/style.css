@@ -11,7 +11,9 @@ body{
     color: #fff;
     text-align: justify;
 }
-
+ul li{ 
+  list-style: none;
+}
 .titulo-margen {
   padding-top: 5rem;
   padding-bottom: 5rem;
