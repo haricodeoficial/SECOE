@@ -74,7 +74,7 @@ $url = ruta::ctrRuta();
 			$inicio = true; 
 		}
 		else if ($ruta == "conoce-mas") {
-			
+			$inicio = false; 
 		}
 		else{
 			include "modulos/error404.php";
