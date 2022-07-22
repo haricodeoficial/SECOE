@@ -1,3 +1,4 @@
+
 *{
 	margin: 0;
 	padding: 0;
@@ -681,19 +682,4 @@ footer {
   .main-menu2.active{
     left: 0;
   }
-}
-#select-style{
-  background:#A4BF75 ;
-  width: 100%;
-  color: #000;
-}
-
-#boton-submit{
-  padding: 1rem;
-  background:#A4BF75 ;
-  color: #000;
-  border: none;
-}
-#enter-number{
-  color: #000;
 }

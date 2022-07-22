@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: Echo the message
         run: |
-          echo "Hola daniel esto es!"
+
+          echo "prueba de github actions"
