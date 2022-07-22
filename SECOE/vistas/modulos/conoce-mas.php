@@ -7,31 +7,17 @@
 
 
     <div width="100%" class="intro" >
+     
       <h1>
-        CO2
-      </h1>
-
-<div data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
-
-     <p>preube</p>
-</div>
-
-<div data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
-
-     <p>ueube</p>
-</div>
+       Esto es una realidad,<br>
+       "El cambio climatico"
+     </h1>  
 
 
           <video src="<?php echo $url;?>vistas/img/CO2.mp4"></video>
     </div>
 
-  <section class="sectionConocer">
-      <h1>REVOLUTIONARRY</h1>
-  </section>
+
   <!--===========================
     JavaScript  
   =============================-->
