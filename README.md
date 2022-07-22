@@ -1,2 +1,1 @@
-# SECOE
-Aplicación oficial Hackathon 2022
+# hackathon
