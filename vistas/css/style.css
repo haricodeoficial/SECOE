@@ -428,35 +428,7 @@ textarea.form-control {
   margin-bottom: 0;
 }
 
-footer {
-  padding: 7em 0;
-}
 
-.footer-05 {
-  background: #548294;
-  padding: 4em 0 !important;
-}
-
-.footer-05 .border-bottom,
-.footer-05 .border-top {
-  border-color: #75aa42 !important;
-}
-
-.footer-05 a {
-  color: #fff;
-}
-
-.footer-05 a:hover {
-  color: #A4BF75;
-}
-
-.footer-05 p {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footer-05 .logo {
-  line-height: 1.2;
-}
 
 .footer-05 .logo a {
   font-size: 28px;
