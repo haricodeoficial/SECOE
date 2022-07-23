@@ -39,6 +39,23 @@ ul li{
   }
 }
 
+.link-land{
+  color: #fff;
+  font-weight:lighter;
+  font-size: 4rem;
+  transition: all 0.7s;
+}
+.link-land:hover{
+  color: #000;
+  font-size: 5.2rem;
+  font-weight: bold;
+  transition: all 0.7s;
+}
+
+.separador {
+  height: 80px;
+}
+
 .main-header {
   background-color: rgba(48, 71, 94, 0.2);
   height: 80px;
@@ -161,11 +178,22 @@ ul li{
   border: none;
 }
 
+.card {
+  padding: 30px;
+}
 
+.card-title {
+  font-size: 64px;
+  margin-top: 55px;
+}
 
+.card-text {
+  font-size: 16px;
+}
 
-
-
+.card img{
+  max-height: 400px;
+}
 
 
 .main-banner {
@@ -188,6 +216,15 @@ ul li{
 
 #bg-video::-webkit-media-controls {
   display: none !important;
+}
+
+.center-image{
+  margin-left: 16.67%;
+}
+
+.mapa {
+  width: 100%;
+  height: 600px;
 }
 
 .video-overlay {
@@ -391,35 +428,7 @@ textarea.form-control {
   margin-bottom: 0;
 }
 
-footer {
-  padding: 7em 0;
-}
 
-.footer-05 {
-  background: #548294;
-  padding: 4em 0 !important;
-}
-
-.footer-05 .border-bottom,
-.footer-05 .border-top {
-  border-color: #75aa42 !important;
-}
-
-.footer-05 a {
-  color: #fff;
-}
-
-.footer-05 a:hover {
-  color: #A4BF75;
-}
-
-.footer-05 p {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footer-05 .logo {
-  line-height: 1.2;
-}
 
 .footer-05 .logo a {
   font-size: 28px;
@@ -503,18 +512,6 @@ footer {
   transition: 1s;
 }
 
-.link-land{
-  color: #fff;
-  font-weight:lighter;
-  font-size: 4rem;
-  transition: all 0.7s;
-}
-.link-land:hover{
-  color: #000;
-  font-size: 5.2rem;
-  font-weight: bold;
-  transition: all 0.7s;
-}
 
 .section-banner-1 {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(255, 1, 1, 0.315)), url(https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg);
@@ -532,7 +529,6 @@ footer {
 
 
 
-
 .section-banner-2 {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(248, 240, 4, 0.315)), url(https://cdn.pixabay.com/photo/2016/07/22/16/29/fog-1535201_960_720.jpg);
   background-size: cover;
@@ -547,7 +543,6 @@ footer {
   justify-content: center;
 }
 
-
 .section-banner-3 {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(55, 220, 30, 0.315)), url(https://cdn.pixabay.com/photo/2014/12/02/03/11/grapes-553462_1280.jpg);
   background-size: cover;
@@ -560,14 +555,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
+
+}
 
 #boletin {
   background: #A4BF75;
 
 }
-
 
 .glider-contain {
   width: 90%;
@@ -704,6 +699,7 @@ footer {
     left: 0;
   }
 }
+
 /*CAUSAS*/
 #causas{
   background: #d36868;

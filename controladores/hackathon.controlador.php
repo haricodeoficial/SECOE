@@ -13,5 +13,10 @@ class controladorHackathon{
 		$respuesta = modeloHackathon::modeloHackathonDatos($tabla, $item, $valor);
 		return $respuesta;
 	}
+	static public function mostrarRegiones($item, $valor){
+		$tabla = "mapajalisco";
+		$respuesta = modeloHackathon::modeloHackathonDatos($tabla, $item, $valor);
+		return $respuesta;
+	}
 }
 ?>

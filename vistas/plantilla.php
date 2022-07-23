@@ -48,6 +48,7 @@ $url = ruta::ctrRuta();
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo $url;?>vistas/css/style.css">
+<link rel="stylesheet" href="<?php echo $url;?>vistas/css/conocer-mas.css" />
 <!--FIN - ETIQUETAS CSS-->
 </head>
 
@@ -74,7 +75,8 @@ $url = ruta::ctrRuta();
 			$inicio = true; 
 		}
 		else if ($ruta == "conoce-mas") {
-			
+			include "modulos/conoce-mas.php";
+			$inicio = false; 
 		}
 		else if ($ruta == "causas") {
 			include 'modulos/causas.php';
@@ -100,6 +102,29 @@ $url = ruta::ctrRuta();
 	include "modulos/footer.php";
 	?>
 </body>
+<!--===========================
+    conoce-mas  
+  =============================-->
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"
+      integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
+      integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
 
 <!--SCROLL MAGIC-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -110,65 +135,127 @@ $url = ruta::ctrRuta();
 <script src="<?php echo $url;?>vistas/js/menu.js"></script>
 
 <!--Azure Maps -->
-<script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.js"></script>
+<script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+<?php
+
+echo'
 <script>
 	var map, map2;
-
-	var weatherTileUrl = 'https://atlas.microsoft.com/map/tile?api-version=2.1&tilesetId=microsoft.weather.infrared.main&zoom=7&x=-103.5&y=20.5';
 	
 	function GetMap() {
 		map = new atlas.Map("mapa-clima",{
 			center: [-103.5, 20.5],
         	zoom: 7,
-			style: 'grayscale_dark',
-			view: 'Auto',
+			view: "Auto",
+			style: "grayscale_dark",
+			
 			authOptions: {
-				authType: 'subscriptionKey',
-				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A'
+				authType: "subscriptionKey",
+				subscriptionKey: "7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A",
+				getToken: function (resolve, reject, map) {
+                        //URL to your authentication service that retrieves an Azure Active Directory Token.
+                        var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
+
+                        fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+                    }
 			}
 		})
 
-		map.events.add('ready', function (){
-			var layerName = document.getElementById("layerSelector").value;
-
-            var tileUrl = weatherTileUrl.replace('{layerName}', layerName);
-
-            if (!tileLayer) {
-                //Create a tile layer and add it to the map below the label layer.
-                tileLayer = new atlas.layer.TileLayer({
-                    tileUrl: tileUrl,
-                    opacity: 0.9,
+		map.events.add("ready", function (){
+			tileLayer = new atlas.layer.TileLayer({
+                    tileUrl: "https://atlas.microsoft.com/map/tile?zoom={z}&x={x}&y={y}&api-version=2.1&tilesetId=microsoft.weather.infrared.main&subscription-key=7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A",
+                    opacity: 0.5,
                     tileSize: 256
                 });
 
-                map.layers.add(tileLayer, 'labels');
-            } else {
-                tileLayer.setOptions({
-                    tileUrl: tileUrl
-                });
-            }
+                map.layers.add(tileLayer);
 		})
 
 
 		map2 = new atlas.Map("mapa-relieve",{
 			center: [-103.5, 20.5],
         	zoom: 7,
-			style: 'grayscale_light',
-			view: 'Auto',
+			style: "grayscale_light",
+			view: "Auto",
 			authOptions: {
-				authType: 'subscriptionKey',
-				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A'
+				authType: "subscriptionKey",
+				subscriptionKey: "7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A"
 			}
-		})
+		});
+
+		map2.events.add("ready", function () {
+			datasource = new atlas.source.DataSource();
+			map2.sources.add(datasource);
+
+			datasource.add([
+			';
+
+			$item = null;
+			$valor = null;
+			$categorias = controladorHackathon::mostrarRegiones($item, $valor);
+			foreach ($categorias as $key => $value) {
+				echo 'new atlas.data.Feature(new atlas.data.Point(['.$value['coordenada-x'].','.$value['coordenada-y'].']), {
+						name: "'.$value['regiones'].'",
+						description: "'.modeloHackathon::datoTerreno($value['id-terreno'])[0].'"
+					}),
+				';
+			}
+			
+				
+			
+
+			echo ']);
+			//Add a layer for rendering point data as symbols.
+			symbolLayer = new atlas.layer.SymbolLayer(datasource, null, { iconOptions: {allowOverlap: true}});
+			map2.layers.add(symbolLayer);
+
+			//Create a popup but leave it closed so we can update it and display it later.
+			popup = new atlas.Popup({
+				position: [0, 0],
+				pixelOffset: [0, -18]
+			});
+
+			map2.events.add("mousemove", closePopup);
+
+	
+			map2.events.add("mousemove", symbolLayer, symbolHovered);
+			map2.events.add("touchstart", symbolLayer, symbolHovered);
+		});
+
+		
+	}
+
+	function closePopup() {
+		popup.close();
+	}
+	
+	function symbolHovered(e) {
+		//Make sure the event occurred on a shape feature.
+		if (e.shapes && e.shapes.length > 0) {
+			var properties = e.shapes[0].getProperties();
+
+			//Update the content and position of the popup.
+			popup.setOptions({
+				//Create the content of the popup.
+				content: `<div style="padding:10px; color:#000000;"><b>${properties.name}</b><br/>${properties.description}</div>`,
+				position: e.shapes[0].getCoordinates(),
+				pixelOffset: [0, -18]
+			});
+
+			//Open the popup.
+			popup.open(map2);
+		}
 	}
 
 </script>
+';
+?>
 
 <!--ETIQUETAS JS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script src="<?php echo $url;?>vistas/js/glider.js" type="text/javascript"></script>
-
+<script src="<?php echo $url;?>vistas/js/app.js" type="text/javascript"></script>
 <script src="<?php echo $url;?>vistas/js/main.js" type="text/javascript"></script>
 <!--FIN - ETIQUETAS JS-->
 

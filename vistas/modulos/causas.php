@@ -2,27 +2,19 @@
     <div class="col-sm-12 d-flex justify-content-center titulo-margen causas-titulo">
         <h1 class="text-center ">Causas</h1>
     </div>
-
 </section>
 <div>
 <div class="contenedor-causas">
-<h3>Lorem ipsum dolor sit amuptit aut harum itaque minima, molestias totam vitae? -quote</h3>
+<h3>Las causas del cambio climático</h3>
 
     <section id="causas">
     <div class="container-fluid">
         <div class="row">
-
            <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                 <h1 style="padding-bottom: 5rem;" class="text-center">Causas</h1>
-
                  <div class="glider-contain">
                   <div class="col-sm-6 d-flex">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
+                     <p>Los cientificos explican que la tendencia de calentamiento global observada desde el siglo XX se debe al efecto invernadero.<br><br>Existen gases que tiene la capacidad de bloqear el calor y no permitan que este salga al espacio. Estos gases son los gases de efecto invernadero. Aunque el efecto invernadero es un fenómeno natural, las actividades humanas han cambiado esta proceso. El uso hidrocarburos, la quema de carbón y el uso de petróleo han liberado cantidades masivas de gases de efecto invernadero lo cual ha echo que la temperatura de la tierra haya ido en aumento. </p>
                      <!-- HTML !-->
                     </div>
                     <div class="col-sm-6 d-flex">

@@ -2,27 +2,19 @@
     <div class="col-sm-12 d-flex justify-content-center titulo-margen soluciones-titulo">
         <h1 class="text-center ">Soluciones</h1>
     </div>
-
 </section>
 <div>
 <div class="contenedor-soluciones">
-<h3>Lorem ipsum dolor sit amuptit aut harum itaque minima, molestias totam vitae? -quote</h3>
+<h3>Algunas soluciones para combatir el cambio climático</h3>
 
     <section id="soluciones">
     <div class="container-fluid">
         <div class="row">
-
            <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                 <h1 style="padding-bottom: 5rem;" class="text-center">Soluciones</h1>
-
                  <div class="glider-contain">
                   <div class="col-sm-6 d-flex">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
+                     <p>Los efectos del cambio climático son desastrosos y demuestran ser un peligro a nuestra existencia. Sin Embargo; se pueden tomar acciones individuales para reducir la liberación de gases de efecto invernadero. Algunas acciones que tú puedes tomar son: Tomar medios de transporte que usen gasolina, como bicicletao la patineta. <br>Reducir el consumo de carne y consumir frutas de temporada. Tratar de mantener las luces que no esten usando apagadas evitar usar los calentadores y usarlos solo cuando sea necesario. </p>
                      <!-- HTML !-->
                     </div>
                     <div class="col-sm-6 d-flex">

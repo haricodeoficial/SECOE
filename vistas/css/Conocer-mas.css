@@ -1,0 +1,156 @@
+
+.intro {
+  height: 100vh;
+  padding: 0px!important;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+}
+
+.intro div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+}
+
+section {
+  height: 100vh;
+  color: black;
+
+}
+
+section h1 {
+  padding-top: 300px;
+  text-align: center;
+  font-size: 80px;
+  margin: 0px;
+}
+
+.bannerConoce{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(https://cdn.pixabay.com/photo/2014/02/05/08/19/smoke-258786_960_720.jpg);
+  padding: 0px;
+
+}
+
+.bannerConoce h1{
+  font-size: 5em;
+}
+
+.textConocer{
+  font-size: 1.5em;
+  padding: 0px 20% 0px 0px;
+}
+
+.bannerCambio{
+  padding: 140px 0px;
+}
+
+.gasesInvernadero{
+  color: #FFFFFF;
+}
+
+.textGases{
+  font-size: 1.6rem;
+}
+.bannerGases{
+  padding: 80px 60px;
+}
+
+.bannerGases h1{
+    font-size: 70px;
+    align-items: left;
+}
+
+.bannerOrgaizations{
+  background-color: #ffffff;
+}
+.organizations {
+padding: 0px 450px;
+
+color: #A4BF75;
+}
+
+.bannerOrgaizations h2{
+  font-size: 80px ;
+  padding: 60px 0px;
+  color: #2B3C42;
+}
+
+
+.bannerGas{
+  background-color: #FFFFFF;
+  color: #2B3C42;
+  padding:  0px 0px;
+}
+
+.bannerGasPrincipal{
+background-color: #ffffff;
+}
+
+/*=============================================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL  (MD revisamos en 1024)
+==============================================================*/
+
+@media (max-width: 1199px) {
+  /*Cambio climatico*/
+  .bannerConoce h1{
+    font-size: 3.5em;
+  }
+
+  .textConocer{
+    font-size: 1.2em;
+    padding: 0px 50px 0px 0px;
+  }
+.organizations {
+padding: 0px 350px;
+
+}
+}
+
+/*=============================================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+==============================================================*/
+
+@media(max-width: 768px) {
+/*Cambio climatico*/
+  .bannerConoce h1{
+    font-size: 3.5em;
+    padding: 0px 50px 0px 50px;
+  }
+
+  .textConocer{
+    font-size: 1em;
+    padding: 0px 50px 0px 50px;
+  }
+
+  .bannerGases h1{
+    font-size: 40px;
+    align-items: left;
+}
+
+.textGases{
+  font-size: 1.4rem;
+}
+.organizations {
+padding: 0px 250px;
+
+}
+}
