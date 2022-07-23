@@ -31,7 +31,7 @@
         </div>
         <div class="row" style="background-color: #A4BF75; padding-bottom: 50px;">
             <div class="col-sm-12 d-flex justify-content-center titulo-margen">
-                    <h1 class="text-center ">Mapa de Relieve de Jalisco</h1>
+                    <h1 class="text-center ">Mapa de terrenos de Jalisco</h1>
             </div>
             <div class="center col-sm-8 d-flex">
               <div id="mapa-relieve" class="mapa"></div>

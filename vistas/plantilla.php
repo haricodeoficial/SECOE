@@ -48,6 +48,7 @@ $url = ruta::ctrRuta();
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo $url;?>vistas/css/style.css">
+<link rel="stylesheet" href="<?php echo $url;?>vistas/css/conocer-mas.css" />
 <!--FIN - ETIQUETAS CSS-->
 </head>
 
@@ -74,6 +75,7 @@ $url = ruta::ctrRuta();
 			$inicio = true; 
 		}
 		else if ($ruta == "conoce-mas") {
+			include "modulos/conoce-mas.php";
 			$inicio = false; 
 		}
 		else{
@@ -156,7 +158,7 @@ $url = ruta::ctrRuta();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script src="<?php echo $url;?>vistas/js/glider.js" type="text/javascript"></script>
-
+<script src="<?php echo $url;?>vistas/js/app.js" type="text/javascript"></script>
 <script src="<?php echo $url;?>vistas/js/main.js" type="text/javascript"></script>
 <!--FIN - ETIQUETAS JS-->
 
