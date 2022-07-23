@@ -4,7 +4,7 @@
 =======================-->
 <div class="container-fluid bannerConoce">
   <div class="container bannerCambio">
-      <h1>Cambio climatico</h1>
+      <h1>Cambio climático</h1>
   <p class="textConocer">
     El Cambio Climático ocurre por una exacerbada acción del efecto invernadero; esto ocurre por una mayor concentración de gases de efecto invernadero GEI, en la atmósfera.
     <br>
