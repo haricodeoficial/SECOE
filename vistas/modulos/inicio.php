@@ -27,15 +27,10 @@
              <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 class="text-center ">¿En que consiste?</h1>
             </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>SECOE es el mejor sitio para informarte sobre el cambio climatico y saber que acciones formar para combatirlo. La plataforma también ofrece servicios que detallan la captura de carbono en diversos tipos de suelo y climas de Jalisco. También se muestran que tipos de árboles existen en la región. La plataforma también cuenta con una herramienta que permite ver la viabilidad de proyectos de captura de carbono. Esto lo hace por medio de los datos de mapas. La plataforma también ofrece otros datos relevantes sobre el cambio climático. </p>
 
               <a data-aos="fade-up"
-     data-aos-duration="1000" class="button-50" role="button">Saber más</a>
+     data-aos-duration="1000" class="button-50" role="button" href="conoce-mas">Saber más</a>
 
            </div>
            <div class="col-sm-6 d-flex">
@@ -88,12 +83,7 @@
                     <h1 style="padding-bottom: 5rem;" class="text-center">Boletín</h1>
                  <div class="glider-contain">
                   <div class="col-sm-6 d-flex">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </p>
+                     <p>El cambio climático incluido por el ser humano esta causando desastres a la naturaleza y afectando la vida de millones de personas. Es por ello que debemos mantenernos informados sobre el cambio climático y lo que averiguan los cientificos sobre este. En esta sección verás las noticias más relevantes sobre el cambio climático alrededor del mundo</p>
                      <!-- HTML !-->
 <a data-aos="fade-up"
      data-aos-duration="1000"  class="button-50" role="button">Suscribirme</a>
