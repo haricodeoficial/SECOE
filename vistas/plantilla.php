@@ -78,6 +78,18 @@ $url = ruta::ctrRuta();
 			include "modulos/conoce-mas.php";
 			$inicio = false; 
 		}
+		else if ($ruta == "causas") {
+			include 'modulos/causas.php';
+			$inicio=false;
+		}
+		else if ($ruta == "efectos") {
+			include 'modulos/efectos.php';
+			$inicio=false;
+		}
+		else if ($ruta == "soluciones") {
+			include 'modulos/soluciones.php';
+			$inicio=false;
+		}
 		else{
 			include "modulos/error404.php";
 			$inicio = false; 
