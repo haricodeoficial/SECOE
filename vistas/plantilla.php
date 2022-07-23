@@ -112,43 +112,37 @@ $url = ruta::ctrRuta();
 <script src="<?php echo $url;?>vistas/js/menu.js"></script>
 
 <!--Azure Maps -->
-<script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.js"></script>
+<script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
 <script>
 	var map, map2;
-
-	var weatherTileUrl = 'https://atlas.microsoft.com/map/tile?api-version=2.1&tilesetId=microsoft.weather.infrared.main&zoom=7&x=-103.5&y=20.5';
 	
 	function GetMap() {
 		map = new atlas.Map("mapa-clima",{
 			center: [-103.5, 20.5],
         	zoom: 7,
-			style: 'grayscale_dark',
 			view: 'Auto',
+			style: 'grayscale_dark',
+			
 			authOptions: {
 				authType: 'subscriptionKey',
-				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A'
+				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A',
+				getToken: function (resolve, reject, map) {
+                        //URL to your authentication service that retrieves an Azure Active Directory Token.
+                        var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
+
+                        fetch(tokenServiceUrl).then(r => r.text()).then(token => resolve(token));
+                    }
 			}
 		})
 
 		map.events.add('ready', function (){
-			var layerName = document.getElementById("layerSelector").value;
-
-            var tileUrl = weatherTileUrl.replace('{layerName}', layerName);
-
-            if (!tileLayer) {
-                //Create a tile layer and add it to the map below the label layer.
-                tileLayer = new atlas.layer.TileLayer({
-                    tileUrl: tileUrl,
-                    opacity: 0.9,
+			tileLayer = new atlas.layer.TileLayer({
+                    tileUrl: 'https://atlas.microsoft.com/map/tile?zoom={z}&x={x}&y={y}&api-version=2.1&tilesetId=microsoft.weather.infrared.main&subscription-key=7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A',
+                    opacity: 0.5,
                     tileSize: 256
                 });
 
-                map.layers.add(tileLayer, 'labels');
-            } else {
-                tileLayer.setOptions({
-                    tileUrl: tileUrl
-                });
-            }
+                map.layers.add(tileLayer);
 		})
 
 
@@ -161,7 +155,63 @@ $url = ruta::ctrRuta();
 				authType: 'subscriptionKey',
 				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A'
 			}
-		})
+		});
+
+		map2.events.add('ready', function () {
+			datasource = new atlas.source.DataSource();
+			map2.sources.add(datasource);
+
+			datasource.add([
+                    new atlas.data.Feature(new atlas.data.Point([-102.9,19.7]), {
+                        name: 'Point 1 Title',
+                        description: 'This is the description 1.'
+                    })
+                ]);
+
+			//Add a layer for rendering point data as symbols.
+			symbolLayer = new atlas.layer.SymbolLayer(datasource, null, { iconOptions: {allowOverlap: true}});
+			map2.layers.add(symbolLayer);
+
+			//Create a popup but leave it closed so we can update it and display it later.
+			popup = new atlas.Popup({
+				position: [0, 0],
+				pixelOffset: [0, -18]
+			});
+
+			map2.events.add('mousemove', closePopup);
+
+			/**
+			 * Open the popup on mouse move or touchstart on the symbol layer.
+			 * Mouse move is used as mouseover only fires when the mouse initially goes over a symbol. 
+			 * If two symbols overlap, moving the mouse from one to the other won't trigger the event for the new shape as the mouse is still over the layer.
+			 */
+			map2.events.add('mousemove', symbolLayer, symbolHovered);
+			map2.events.add('touchstart', symbolLayer, symbolHovered);
+		});
+
+		
+	}
+
+	function closePopup() {
+		popup.close();
+	}
+	
+	function symbolHovered(e) {
+		//Make sure the event occurred on a shape feature.
+		if (e.shapes && e.shapes.length > 0) {
+			var properties = e.shapes[0].getProperties();
+
+			//Update the content and position of the popup.
+			popup.setOptions({
+				//Create the content of the popup.
+				content: `<div style="padding:10px; color:#000000;"><b>${properties.name}</b><br/>${properties.description}</div>`,
+				position: e.shapes[0].getCoordinates(),
+				pixelOffset: [0, -18]
+			});
+
+			//Open the popup.
+			popup.open(map2);
+		}
 	}
 
 </script>

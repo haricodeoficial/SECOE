@@ -50,12 +50,12 @@
                 </p>
             </div>
             <div class="col-sm-6 d-flex">
-                <img src="<?php echo $url;?>vistas/img/viabilidad.png" class="center">
+                <img src="<?php echo $url;?>vistas/img/viabilidad.png" class="center-image">
             </div>
         </div>
         <div class="card row" style="background-color: #A4BF75;">
             <div class="col-sm-6 d-flex">
-                <img src="<?php echo $url;?>vistas/img/tecnico.png" class="center">
+                <img src="<?php echo $url;?>vistas/img/tecnico.png" class="center-image">
             </div>
             <div style="height:400px;" class="col-sm-6 d-flex align-items-center">
                 <h1 class="card-title d-flex">Mérito técnico</h1>
