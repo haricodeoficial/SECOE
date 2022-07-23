@@ -111,7 +111,7 @@
 
      <h1>
       Esto es una realidad,<br>
-     "El cambio climatico"
+     "El cambio climático"
     </h1>  
 
     <video src="<?php echo $url;?>vistas/img/CO2.mp4"></video>
