@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="card row">
             <div class="col-sm-6 d-flex">
-                <img src="<?php echo $url;?>vistas/img/alto-impacto.png" class="center">
+                <img src="<?php echo $url;?>vistas/img/alto-impacto.png" class="center-image">
             </div>
             <div style="height:400px;" class="col-sm-6 d-flex align-items-center">
                 <h1 class="card-title d-flex">Alto impacto</h1>
@@ -25,12 +25,12 @@
                 </p>
             </div>
             <div class="col-sm-6 d-flex">
-                <img src="<?php echo $url;?>vistas/img/creatividad.png" class="center">
+                <img src="<?php echo $url;?>vistas/img/creatividad.png" class="center-image">
             </div>
         </div>
         <div class="card row" style="background-color: #548294;">
             <div class="col-sm-6 d-flex">
-                <img src="<?php echo $url;?>vistas/img/escalabilidad.png" class="center">
+                <img src="<?php echo $url;?>vistas/img/escalabilidad.png" class="center-image">
             </div>
             <div style="height:400px;" class="col-sm-6 d-flex align-items-center">
                 <h1 class="card-title d-flex">Escalabilidad</h1>
