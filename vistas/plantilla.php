@@ -113,6 +113,9 @@ $url = ruta::ctrRuta();
 
 <!--Azure Maps -->
 <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+<?php
+
+echo'
 <script>
 	var map, map2;
 	
@@ -120,12 +123,12 @@ $url = ruta::ctrRuta();
 		map = new atlas.Map("mapa-clima",{
 			center: [-103.5, 20.5],
         	zoom: 7,
-			view: 'Auto',
-			style: 'grayscale_dark',
+			view: "Auto",
+			style: "grayscale_dark",
 			
 			authOptions: {
-				authType: 'subscriptionKey',
-				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A',
+				authType: "subscriptionKey",
+				subscriptionKey: "7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A",
 				getToken: function (resolve, reject, map) {
                         //URL to your authentication service that retrieves an Azure Active Directory Token.
                         var tokenServiceUrl = "https://samples.azuremaps.com/api/GetAzureMapsToken";
@@ -135,9 +138,9 @@ $url = ruta::ctrRuta();
 			}
 		})
 
-		map.events.add('ready', function (){
+		map.events.add("ready", function (){
 			tileLayer = new atlas.layer.TileLayer({
-                    tileUrl: 'https://atlas.microsoft.com/map/tile?zoom={z}&x={x}&y={y}&api-version=2.1&tilesetId=microsoft.weather.infrared.main&subscription-key=7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A',
+                    tileUrl: "https://atlas.microsoft.com/map/tile?zoom={z}&x={x}&y={y}&api-version=2.1&tilesetId=microsoft.weather.infrared.main&subscription-key=7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A",
                     opacity: 0.5,
                     tileSize: 256
                 });
@@ -149,25 +152,36 @@ $url = ruta::ctrRuta();
 		map2 = new atlas.Map("mapa-relieve",{
 			center: [-103.5, 20.5],
         	zoom: 7,
-			style: 'grayscale_light',
-			view: 'Auto',
+			style: "grayscale_light",
+			view: "Auto",
 			authOptions: {
-				authType: 'subscriptionKey',
-				subscriptionKey: '7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A'
+				authType: "subscriptionKey",
+				subscriptionKey: "7t33LOdChDI0nOAZAGK1VjAZ-qHnkXOrA-Awzpn8k5A"
 			}
 		});
 
-		map2.events.add('ready', function () {
+		map2.events.add("ready", function () {
 			datasource = new atlas.source.DataSource();
 			map2.sources.add(datasource);
 
 			datasource.add([
-                    new atlas.data.Feature(new atlas.data.Point([-102.9,19.7]), {
-                        name: 'Point 1 Title',
-                        description: 'This is the description 1.'
-                    })
-                ]);
+			';
 
+			$item = null;
+			$valor = null;
+			$categorias = controladorHackathon::mostrarRegiones($item, $valor);
+			foreach ($categorias as $key => $value) {
+				echo 'new atlas.data.Feature(new atlas.data.Point(['.$value['coordenada-x'].','.$value['coordenada-y'].']), {
+						name: "'.$value['regiones'].'",
+						description: "'.modeloHackathon::datoTerreno($value['id-terreno'])[0].'"
+					}),
+				';
+			}
+			
+				
+			
+
+			echo ']);
 			//Add a layer for rendering point data as symbols.
 			symbolLayer = new atlas.layer.SymbolLayer(datasource, null, { iconOptions: {allowOverlap: true}});
 			map2.layers.add(symbolLayer);
@@ -178,15 +192,11 @@ $url = ruta::ctrRuta();
 				pixelOffset: [0, -18]
 			});
 
-			map2.events.add('mousemove', closePopup);
+			map2.events.add("mousemove", closePopup);
 
-			/**
-			 * Open the popup on mouse move or touchstart on the symbol layer.
-			 * Mouse move is used as mouseover only fires when the mouse initially goes over a symbol. 
-			 * If two symbols overlap, moving the mouse from one to the other won't trigger the event for the new shape as the mouse is still over the layer.
-			 */
-			map2.events.add('mousemove', symbolLayer, symbolHovered);
-			map2.events.add('touchstart', symbolLayer, symbolHovered);
+	
+			map2.events.add("mousemove", symbolLayer, symbolHovered);
+			map2.events.add("touchstart", symbolLayer, symbolHovered);
 		});
 
 		
@@ -215,6 +225,8 @@ $url = ruta::ctrRuta();
 	}
 
 </script>
+';
+?>
 
 <!--ETIQUETAS JS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

@@ -18,4 +18,11 @@ $stmt = null;
 
 	}
 	
+	static public function datoTerreno($id){
+		$stmt = conexionBaseDeDatos::conectar()->prepare("SELECT CondicionTerreno FROM terrenojalisco WHERE id = $id");
+		$stmt -> execute();
+		return $stmt -> fetch();
+		$stmt -> close();
+		$stmt = null;
+	}
 }
