@@ -39,6 +39,19 @@ ul li{
   }
 }
 
+.link-land{
+  color: #fff;
+  font-weight:lighter;
+  font-size: 4rem;
+  transition: all 0.7s;
+}
+.link-land:hover{
+  color: #000;
+  font-size: 5.2rem;
+  font-weight: bold;
+  transition: all 0.7s;
+}
+
 .separador {
   height: 80px;
 }
@@ -180,7 +193,6 @@ ul li{
 
 .card img{
   max-height: 400px;
-  margin-left: 80px;
 }
 
 
@@ -206,7 +218,7 @@ ul li{
   display: none !important;
 }
 
-.center{
+.center-image{
   margin-left: 16.67%;
 }
 
@@ -530,7 +542,7 @@ footer {
 
 
 .section-banner-1 {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(164, 191, 117, 0.4)), url(https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(255, 1, 1, 0.315)), url(https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -538,13 +550,15 @@ footer {
   width: 100%;
   height: 33.3vh;
   cursor: pointer;
-  transition: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 
 .section-banner-2 {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(131, 204, 205, 0.4)), url(https://cdn.pixabay.com/photo/2016/07/22/16/29/fog-1535201_960_720.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(248, 240, 4, 0.315)), url(https://cdn.pixabay.com/photo/2016/07/22/16/29/fog-1535201_960_720.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -552,10 +566,13 @@ footer {
   width: 100%;
   height: 33.3vh;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-banner-3 {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(84, 130, 148, 0.4)), url(https://cdn.pixabay.com/photo/2014/12/02/03/11/grapes-553462_1280.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(55, 220, 30, 0.315)), url(https://cdn.pixabay.com/photo/2014/12/02/03/11/grapes-553462_1280.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -563,6 +580,9 @@ footer {
   width: 100%;
   height: 33.3vh;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 
 }
@@ -707,3 +727,80 @@ footer {
     left: 0;
   }
 }
+
+/*CAUSAS*/
+#causas{
+  background: #d36868;
+  border-radius: 2.5%;
+}
+ .bg-causas{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(186, 120, 120, 0.315)), url(https://cdn.pixabay.com/photo/2015/01/25/18/24/industry-611668_960_720.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+width: 100%;
+height: 70vh;
+display: flex;
+align-items: center;
+ }
+ .causas-titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .contenedor-causas{
+  background-color: #121b2f;
+  padding: 5rem;
+ }
+ /*EFECTOS*/
+ #efectos{
+  background: #b8b691;
+  border-radius: 2.5%;
+ }
+ .bg-efectos{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(186, 120, 120, 0.315)), url(https://cdn.pixabay.com/photo/2022/04/07/14/31/bottle-7117637_960_720.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+width: 100%;
+height: 70vh;
+display: flex;
+align-items: center;
+ }
+ .efectos-titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .contenedor-efectos{
+  background-color: #121b2f;
+  padding: 5rem;
+ }
+ /*SOLUCIONES*/
+ #soluciones{
+  background: #a4b891;
+  border-radius: 2.5%;
+}
+ .bg-soluciones{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(186, 120, 120, 0.315)), url(https://cdn.pixabay.com/photo/2017/04/10/12/53/wind-turbine-2218467_960_720.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+width: 100%;
+height: 70vh;
+display: flex;
+align-items: center;
+ }
+ .soluciones-titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .contenedor-soluciones{
+  background-color: #121b2f;
+  padding: 5rem;
+ }
+ 

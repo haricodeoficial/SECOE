@@ -25,7 +25,7 @@
             <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 class="text-center ">Mapa de Clima en Jalisco</h1>
             </div>
-            <div class="center col-sm-8 d-flex">
+            <div class="center-image col-sm-8 d-flex">
               <div id="mapa-clima" class="mapa"></div>
             </div>
         </div>
@@ -33,7 +33,7 @@
             <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 class="text-center ">Mapa de terrenos de Jalisco</h1>
             </div>
-            <div class="center col-sm-8 d-flex">
+            <div class="center-image col-sm-8 d-flex">
               <div id="mapa-relieve" class="mapa"></div>
             </div>
         </div>
@@ -41,7 +41,7 @@
            <div class="col-sm-12 d-flex justify-content-center titulo-margen">
                     <h1 class="text-center ">Mapa de Especies de Árboles en Jalisco</h1>
             </div>
-            <div class="center col-sm-8 d-flex">
+            <div class="center-image col-sm-8 d-flex">
             </div>
         </div>
            <div class="col-sm-4 d-flex">
